@@ -1,0 +1,1 @@
+51740 corresponds to a node root_peri, which was dismissed from an annotation ontology json-file (see commnents at 3-3 in Supplementary Table 4 in our paper).

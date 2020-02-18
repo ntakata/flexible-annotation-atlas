@@ -1,0 +1,23 @@
+{
+    "success": true,
+    "id": 0,
+    "start_row": 0,
+    "num_rows": 1,
+    "total_rows": 1,
+    "msg": [
+        {
+            "id": 4000000000,
+            "atlas_id": -1,
+            "ontology_id": 1,
+            "acronym": "root",
+            "name": "root",
+            "color_hex_triplet": "FFFFFF",
+            "graph_order": 0,
+            "st_level": null,
+            "hemisphere_id": 3,
+            "parent_structure_id": null,
+            "children": [],
+            "voxel_count": null
+        }
+    ]
+}

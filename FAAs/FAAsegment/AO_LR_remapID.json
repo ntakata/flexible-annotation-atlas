@@ -1,0 +1,66 @@
+{
+    "success": true,
+    "id": 0,
+    "start_row": 0,
+    "num_rows": 1,
+    "total_rows": 1,
+    "msg": [
+        {
+            "id": 1,
+            "atlas_id": -1,
+            "ontology_id": 1,
+            "acronym": "root",
+            "name": "root",
+            "color_hex_triplet": "FFFFFF",
+            "graph_order": 0,
+            "st_level": null,
+            "hemisphere_id": 3,
+            "parent_structure_id": 1,
+            "children": [
+                {
+                    "id": 2,
+                    "atlas_id": 0,
+                    "ontology_id": 1,
+                    "acronym": "grey",
+                    "name": "Basic cell groups and regions",
+                    "color_hex_triplet": "BFDAE3",
+                    "graph_order": 1,
+                    "st_level": null,
+                    "hemisphere_id": 3,
+                    "parent_structure_id": 1,
+                    "children": [],
+                    "voxel_count": 448962
+                },
+                {
+                    "id": 3,
+                    "atlas_id": 691,
+                    "ontology_id": 1,
+                    "acronym": "fiber tracts",
+                    "name": "fiber tracts",
+                    "color_hex_triplet": "CCCCCC",
+                    "graph_order": 1101,
+                    "st_level": null,
+                    "hemisphere_id": 3,
+                    "parent_structure_id": 1,
+                    "children": [],
+                    "voxel_count": 45121
+                },
+                {
+                    "id": 4,
+                    "atlas_id": 716,
+                    "ontology_id": 1,
+                    "acronym": "VS",
+                    "name": "ventricular systems",
+                    "color_hex_triplet": "AAAAAA",
+                    "graph_order": 1292,
+                    "st_level": null,
+                    "hemisphere_id": 3,
+                    "parent_structure_id": 1,
+                    "children": [],
+                    "voxel_count": 6136
+                }
+            ],
+            "voxel_count": 1551
+        }
+    ]
+}
