@@ -10,7 +10,8 @@ This repository contains Python codes for our paper ([bioRxiv](https://doi.org/1
 
 ## Example of FAA
 Four FAAs are available in a FAAs folder which includes an annotation ontology text file, an annotation volume, and an HTML file for zoomable visualization of anatomical hierarchy.
-![FAA-example](FAAs/FAA-example.png)
+![FAA-example-AVs](FAAs/FAA-AVs.png)
+![FAA-example-AOdetailed](FAAs/FAA-AOdetailed.gif)
 
 ## Steps to construct your annotation atlas
 ### 0. Preprocessing
