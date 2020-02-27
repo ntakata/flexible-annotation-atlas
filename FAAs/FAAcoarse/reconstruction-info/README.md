@@ -20,11 +20,11 @@ For FAAcoarse reconstruction without dividing nodes, some steps should be skippe
 
 2-3 skip this step
 
-Rename following files before performing a step 2-4.
-- `AObase_c.json` to `AObase_c_g_f_woVC.json`
-- `AVbase_c.nrrd` to `AVbase_c_g_f.nrrd`
+2-4 skip this step
 
-2-4
+Rename following files before performing a step 3-1.
+- `AObase_c.json` to `AObase_c_g_f.json`
+- `AVbase_c.nrrd` to `AVbase_c_g_f.nrrd`
 
 3-1 `Divide_left_right_AV.ipynb`
 
