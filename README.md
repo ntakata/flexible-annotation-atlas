@@ -8,8 +8,8 @@ This repository contains Python codes for our paper ([bioRxiv](https://doi.org/1
 - The ROI can be combined or divided objectively while maintaining anatomical hierarchy.
 - FAA realizes functional connectivity analysis across the anatomical hierarchy.
 
-## Example of FAA
-Four FAAs are available in a FAAs folder which includes an annotation ontology text file, an annotation volume, and an HTML file for zoomable visualization of anatomical hierarchy.
+## Examples of FAA
+FAA consists of a JSON-formatted text file (anatomical ontology, AO) and a three-dimensional volume file of the mouse brain (annotation volume, AV). In an FAAs folder, some FAAs and an HTML file for zoomable visualization of anatomical hierarchy are available.
 ![FAA-example-AVs](FAAs/FAA-AVs.png)
 ![FAA-example-AOdetailed](FAAs/FAA-AOdetailed.gif)
 
@@ -26,7 +26,7 @@ Specify text-based information: 1) IDs of brain structures ( __Target_ROI_IDs__)
 ## How to share your original FAA
 There are two ways.
 - Share your FAA itself (AO_LR_remapID.json and AV_LR_remapID_RAS.nii).
-- Share a text-based information (AObase_c.json, Target_ROI_IDs, ExpID, Acronyms) to reconstruct FAA.
+- Share a text-based information to reconstruct FAA. See [exampes](/FAAs/FAAdetailed/reconstruction-info/README.md) in an FAAs folder.
 
 ## Software environment
 The pipeline for FAA construction was created with Python (3.7.1) using AllenSDK (version 0.16.1) written in Jupyter Notebook (5.6.0) on Anaconda (2018.12) on Windows 10 (Professional 64 bit, Microsoft). The yaml file for the anaconda environment is available in a yaml folder. [Nbparameterise](https://github.com/takluyver/nbparameterise) is also necessary.
