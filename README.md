@@ -23,6 +23,8 @@ Copy AObase.json and rename it to AObase_c.json. Edit __AObase_c.json__ with a t
 ### 2. Dividing a brain structure based on gene expression and/or fiber projection.
 Specify text-based information: 1) IDs of brain structures ( __Target_ROI_IDs__), 2) Experimental ID ( __ExpID__) of a gene of interest, and 3) __Acronyms__ of a brain structures which are a source and a target of neuronal fiber innervation. Then, run `Divide_nodes.ipynb` to obtain your FAA, which consists of an ontology text file ( __AO_LR_remapID.json__) and an annotation volume ( __AV_LR_remapID_RAS.nii__).
 
+A more detailed manual describing the step-by-step procedure is available at Supplementary Tables 2-4 in our paper.
+
 ## How to share your original FAA
 There are two ways.
 - Share your FAA itself (AO_LR_remapID.json and AV_LR_remapID_RAS.nii).
