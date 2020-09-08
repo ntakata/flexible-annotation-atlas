@@ -1,5 +1,5 @@
 # Information for FAA reconstruction
-This FAAocd was prepared for cortico-striatal-thalamo (CST) circuitry analysis used in Abe et al. (2020) NeuroImage "Diffusion functional MRI reveals global brain network functional abnormalities driven by targeted local activity in a neuropsychiatric disease mouse model".
+This FAAocd was prepared for cortico-striatal-thalamo (CST) circuitry analysis used in [Abe et al. (2020) NeuroImage "Diffusion functional MRI reveals global brain network functional abnormalities driven by targeted local activity in a neuropsychiatric disease mouse model"](https://doi.org/10.1016/j.neuroimage.2020.117318).
 
 For FAAocd reconstruction without dividing nodes, some steps should be skipped. See Supplementary Table 4 in our paper ([bioRxiv](https://doi.org/10.1101/2020.02.17.953547)). 
 
