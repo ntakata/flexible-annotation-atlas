@@ -1,0 +1,24 @@
+name: FAA
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - ipython=7.2.0
+  - jupyter=1.0.0
+  - matplotlib=3.0.3
+  - nbconvert=5.4.0
+  - nbformat=4.4.0
+  - nibabel=2.4.0
+  - numpy=1.15.4
+  - pandas=0.24.2
+  - pillow=5.3.0
+  - pip=18.1
+  - python=3.7.1
+  - scikit-image=0.14.2
+  - scipy=1.2.1
+  - pip:
+    - allensdk==0.16.1
+    - jsonpath-rw==1.4.0
+    - pynrrd==0.3.6
+prefix: C:\Anaconda3\envs\FAA
+
