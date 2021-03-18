@@ -19,10 +19,10 @@ An icicle plot shows anatomical hierarchy of FAAdetailed with a brain structure 
 
 ## Steps to construct your annotation atlas
 ### 0. Preprocessing
-Run `Prepare_AObaseAVbase.ipynb` to obtain preprocessed files in the data folder: a text file (AObase.json) and a volume file (AVbase.nrrd). This preprocessing eliminates _destructive_ brain structures in the original anatomical ontology file and an annotation volume of the mouse brain provided by the Allen Institute for Brain Science (AIBS).
+Run `Prepare_AObaseAVbase.ipynb` to obtain preprocessed files in the data folder: a text file ( __AObase.json__) and a volume file ( __AVbase.nrrd__). This preprocessing eliminates _destructive_ brain structures in the original anatomical ontology file and an annotation volume of the mouse brain provided by the Allen Institute for Brain Science (AIBS).
 
 ### 1. Combining brain structures
-Copy AObase.json and rename it to AObase_c.json in the data folder. Edit __AObase_c.json__ with a text editor to combine brain structures in AVbase.nrrd. Specifically, delete all contents within brackets [] of a key "children" for an inner node to combine its all descendent nodes. For example, "children": [ {"id":8, ... }, ..., {"id": 73, ..., "voxel_count": 6136}] would be "children": [] in a file AObase_c.json. Zoomable visualization of anatomical hierarchy of AObase_c.json is available using an [HTML](https://github.com/ntakata/flexible-annotation-atlas/blob/master/FAAs/FAAbase/icicleplot_FAA.html) file, which facilitates ROI volume check and is useful to decide which brain structures to be combined or not.
+Copy __AObase.json__ and rename it to __AObase_c.json__ in the data folder. Edit __AObase_c.json__ with a text editor to combine brain structures in __AVbase.nrrd__. Specifically, delete all contents within brackets [] of a key "children" for an inner node to combine its all descendent nodes. For example, "children": [ {"id":8, ... }, ..., {"id": 73, ..., "voxel_count": 6136}] would be "children": [] in a file __AObase_c.json__. Zoomable visualization of anatomical hierarchy of __AObase_c.json__ is available using [an HTML file](https://github.com/ntakata/flexible-annotation-atlas/blob/master/FAAs/FAAbase/icicleplot_FAA.html), which facilitates ROI volume check and is useful to decide which brain structures to be combined or not.
 
 ### 2. Dividing a brain structure based on gene expression and/or fiber projection.
 Specify text-based information in `Divide_nodes.ipynb`: 1) IDs of brain structures ( __Target_ROI_IDs__), 2) Experimental ID ( __ExpID__) of a gene of interest, and 3) __Acronyms__ of a brain structures which are a source and a target of neuronal fiber innervation. Then, run `Divide_nodes.ipynb` to obtain your FAA, which consists of an ontology text file ( __AO_LR_remapID.json__) and an annotation volume ( __AV_LR_remapID_RAS.nii__) in the data folder.
@@ -34,7 +34,7 @@ You can use Python scripts (Prepare_AObaseAVbase.py, Divide_nodes.py) instead of
 ## How to share your original FAA
 There are two ways.
 - Share your FAA itself (AO_LR_remapID.json and AV_LR_remapID_RAS.nii).
-- Share a text-based information to reconstruct FAA. See [exampes](/FAAs/FAAdetailed/reconstruction-info/README.md) in an FAAs folder.
+- Share a text-based information to reconstruct FAA. See [examples](/FAAs/FAAdetailed/reconstruction-info/README.md) in an FAAs folder.
 
 ## Software environment
 The pipeline for FAA construction was created with Python (3.7.1) using AllenSDK (version 0.16.1) written in Jupyter Notebook (5.6.0) on Anaconda (2018.12) on Windows 10 (Professional 64 bit, Microsoft). The yaml file for the anaconda environment is available in a yaml folder. [Nbparameterise](https://github.com/takluyver/nbparameterise) is also necessary.
