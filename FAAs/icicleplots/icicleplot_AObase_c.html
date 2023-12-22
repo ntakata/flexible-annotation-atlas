@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+rect {stroke: #fff;}
+.label{
+    font: 10px sans-serif;
+    text-anchor: middle;
+}
+</style>
+
+<body>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<div id="icicle"></div>
+</body>
+
+<script>
+// 1 initial setup
+var width = 1800,
+    height = 800,
+    x = d3.scaleLinear().range([0, width]),
+    y = d3.scaleLinear().range([0, height]);
+var partition = d3.partition()
+    .size([width, height])
+    .padding(0)
+    .round(false);
+var vis = d3.select("#icicle").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+var rect = vis.selectAll("rect");
+var fo = vis.selectAll("foreignObject")
+      
+// 2 load data
+d3.json('AObase_c.json').then(function (root){
+    console.log('L0: root'), console.log(root)
+    console.log('L1: root.msg[0]'), console.log(root.msg[0])
+    console.log('L2: d3.entries(root.msg[0]'), console.log(d3.entries(root.msg[0]))
+    // 2-1 shape root data
+    root = d3.hierarchy(root.msg[0])
+            .sum(function(d) {return d.voxel_count});
+    console.log('L3: root'), console.log(root)
+    partition(root);
+    
+    rect = rect.data(root.descendants())
+        .enter().append("rect")
+        .attr("x", function(d) {return d.x0;})
+        .attr("y", function(d) {return d.y0;})
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .attr("height", function(d) { return d.y1 - d.y0; })
+        .attr("fill", function(d) { return "#" + d.data.color_hex_triplet; })
+        .on("click", clicked);
+
+    fo = fo.data(root.descendants())
+        .enter().append("foreignObject")
+        .attr("x", function(d){return d.x0;})
+        .attr("y", function(d){return d.y0;})
+        .attr("width", function(d){return d.x1 - d.x0;})
+        .attr("height", function(d){return d.y1 - d.y0; })
+        .style("color", "black")
+        .style("cursor", "pointer")
+	.style("font-weight", function(d) { return d.data.voxel_count > 0 ? "bold":""})
+	.text(function(d){return d.data.acronym + ": " + d.value})
+        .on("click", clicked);
+});
+      
+// 3 click
+function clicked(d) {
+    console.log('L5: d of clicked')
+    console.log(d)
+  x.domain([d.x0, d.x1]);
+  y.domain([d.y0, height]).range([d.depth ? 20 : 0, height]);
+
+  rect.transition()
+    .duration(750)
+    .attr("x", function(d) { return x(d.x0); })
+    .attr("y", function(d) { return y(d.y0); })
+    .attr("width", function(d) { return x(d.x1) -x(d.x0); })
+    .attr("height", function(d) { return y(d.y1) -y(d.y0); });
+
+    console.log("d.x0")
+    console.log(d.x0)
+    console.log("d.y0")
+    console.log(d.y0)
+    console.log("d.x1")
+    console.log(d.x1)
+    console.log("d.y1")
+    console.log(d.y1)
+    
+  fo.transition()
+    .duration(750)
+    .attr("x", function(d) { return x(d.x0); })
+    .attr("y", function(d) { return y(d.y0); })
+    .attr("width", function(d) { return x(d.x1) - x(d.x0); })
+    .attr("height", function(d) { return y(d.y1) - y(d.y0); });
+}
+</script>
