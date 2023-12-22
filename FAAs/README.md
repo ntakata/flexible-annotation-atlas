@@ -1,4 +1,4 @@
 - [Simple Web Server](https://simplewebserver.org/) can be used to open an icicleplot_FAA.html for zoomable visualization of anatomical hierarchy.
-    - Please specify the path of the folder containing the icileplot_FAA.html file.
+    - Please specify the path of the folder containing icicleplot_AObase_c.html or icicleplot_FAA.html.
     - If an error occurs on port 8080, try another port (for example, 8081).
     - Then, open http://localhost:8080/ in your browser.
