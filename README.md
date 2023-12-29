@@ -31,10 +31,17 @@ A more detailed manual describing the step-by-step procedure is available [here]
 
 You can use Python scripts (Prepare_AObaseAVbase.py, Divide_nodes.py) instead of these Jupyter notebooks. For example, execute `ipython Prepare_AObaseAVbase.py` in an Anaconda Prompt.
 
-## How to share your original FAA
-There are two ways.
-- Share your FAA itself (AO_LR_remapID.json and AV_LR_remapID_RAS.nii).
-- Share a text-based information to reconstruct FAA. See [examples](/FAAs/FAAdetailed/reconstruction-info/README.md) in an FAAs folder.
+## Q & As
+### How to share your original FAA
+There are two methods to share your FAA:
+- **Direct Sharing**: Share the FAA files directly. This includes the 'AO_LR_remapID.json' and 'AV_LR_remapID_RAS.nii' files.
+- **Text-Based Sharing**: Share text-based information that allows others to reconstruct your FAA. For example, please refer to [the 'FAAs' folder](/FAAs/FAAdetailed/reconstruction-info/README.md).
+
+### Transforming NRRD images to NiFTI Format
+NRRD images can be converted into NiFTI format in RAS orientation using [the code](https://github.com/ntakata/flexible-annotation-atlas/blob/master/notebooks/Transform_AllenImage_from_NRRD_to_NIfTI.ipynb).
+
+### Downloading Structural images
+Structural images, such as 'average_template_100.nrrd', can be downloaded from [the Allen Institute's webpage](https://download.alleninstitute.org/informatics-archive/current-release/mouse_ccf/average_template/)
 
 ## Software environment
 The pipeline for FAA construction was created with Python (3.7.1) using AllenSDK (version 0.16.1) written in Jupyter Notebook (5.6.0) on Anaconda (2018.12) on Windows 10 (Professional 64 bit, Microsoft). The yaml file for the anaconda environment is available in a yaml folder. [Nbparameterise](https://github.com/takluyver/nbparameterise) is also necessary.
