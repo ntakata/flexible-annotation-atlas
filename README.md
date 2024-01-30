@@ -43,5 +43,9 @@ NRRD images can be converted into NiFTI format in RAS orientation using [the cod
 ### Downloading Structural images
 Structural images, such as 'average_template_100.nrrd', can be downloaded from [the Allen Institute's webpage](https://download.alleninstitute.org/informatics-archive/current-release/mouse_ccf/average_template/)
 
+### Precaution for dividing a ROI based on a gene expression energy
+- [gene distribution](https://github.com/ntakata/flexible-annotation-atlas/issues/1#issue-2107405397)
+- [registration](https://github.com/ntakata/flexible-annotation-atlas/issues/2#issue-2107428531)
+
 ## Software environment
 The pipeline for FAA construction was created with Python (3.7.1) using AllenSDK (version 0.16.1, ``` python3 -m pip install allensdk```) written in Jupyter Notebook (5.6.0) on Anaconda (2018.12) on Windows 10 (Professional 64 bit, Microsoft). The yaml file for the anaconda environment is available in a yaml folder. [Nbparameterise](https://github.com/takluyver/nbparameterise) is also necessary.
