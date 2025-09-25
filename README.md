@@ -1,3 +1,4 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ntakata/flexible-annotation-atlas)
 # Flexible annotation atlas (FAA) of the mouse brain
 
 This repository contains Python codes for our papers ([Sci Rep](https://www.nature.com/articles/s41598-021-85807-0) and [bioRxiv](https://doi.org/10.1101/2020.02.17.953547)) __"Flexible annotation atlas of the mouse brain: combining and dividing brain structures of the Allen Brain Atlas while maintaining anatomical hierarchy"__.
